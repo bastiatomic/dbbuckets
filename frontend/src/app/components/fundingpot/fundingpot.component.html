@@ -1,0 +1,33 @@
+<mat-toolbar>
+  <span> Willkommen, Paula Müller </span>
+</mat-toolbar>
+
+<mat-card style="margin: 10px">
+  <mat-card-content>
+    <p>Aufgeteilter Betrag: 14.000€</p>
+    <p>Gesamtsaldo: 20.000€ (IBAN: DE98 9347 8340 1234)</p>
+  </mat-card-content>
+</mat-card>
+
+<div class="grid-container">
+  <div class="pot" *ngFor="let pot of pots">
+
+    <div class="background-bw" [style.background-image]="'url(assets/img_bw.jpg)'"></div>
+    <div class="background-color" [style.background-image]="'url(assets/img_color.jpg)'" [style.clip-path]="'inset(0px ' + (500- pot.goalProgress/100*500) + 'px 0px 0px)'"></div>
+  
+   <!-- <mat-progress-bar mode="determinate" value={{pot.goalProgress}}></mat-progress-bar>-->
+    <h2>{{pot.name}}</h2>
+
+    <div>
+      <p *ngFor="let rule of pot.rules">{{rule}}</p>
+    </div>
+
+    <button style="float: right;" mat-raised-button color="warn" (click)="deleteMe(pot.name)">Löschen</button>
+
+  </div>
+</div>
+
+<button style="margin-left: 10px;margin-top: 10px" mat-raised-button color="primary" (click)="openDialog()">+ Neuer Bucket</button>
+
+
+<br>

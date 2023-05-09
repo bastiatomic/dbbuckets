@@ -1,0 +1,42 @@
+<html>
+    <h1 style="display: inline;">Bucket-Erstellung</h1> <button mat-raised-button color="warn" style="float:right" (click)="close()">X</button>
+
+    <br>
+    <br>
+    <br>
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Name</mat-label>
+        <input matInput name="1" type="text"[(ngModel)]="mock_name">
+      </mat-form-field>
+    
+    </form>
+      
+    <br>
+    
+    <h2>Regeln</h2>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Regel</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let rule of rules" [value]="rule.id">
+          {{rule.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Wert</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+    <br>
+    
+    <button  mat-raised-button color="primary">Neue Regel hinzufügen</button>
+
+    <br>
+
+    <button (click)="savePot()" style="position: absolute; bottom: 30px;" mat-raised-button color="primary">Neuen Bucket speichern</button>
+
+    
+
+</html>

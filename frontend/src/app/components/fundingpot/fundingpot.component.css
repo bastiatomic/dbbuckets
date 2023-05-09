@@ -1,0 +1,48 @@
+.pot {
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.rules {
+    border: 1px solid lightblue;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.example-full-width {
+    width: 100%;
+}
+
+.pot .background-bw,
+.pot .background-color {
+margin-left: -10px;
+margin-top: -10px;
+  background-repeat: no-repeat;
+  background-size: cover; /* Scale the background image to cover the entire div */
+  width: 100%; /* Set the width to 100% of the parent div */
+  height: 100%; /* Set the height to 100% of the parent div */
+  position: absolute; /* Position the background divs over each other */
+  z-index: -1;
+}
+
+.pot {
+    position: relative;
+  }
+
+.pot p, .pot h2{
+    color: white;
+}

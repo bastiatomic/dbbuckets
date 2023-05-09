@@ -1,0 +1,10 @@
+<mat-slider>
+    <input matSliderThumb [(ngModel)]="value" (ngModelChange)="onInputChange($event)" placeholder="Type here" >
+  </mat-slider>
+
+
+<br>
+
+<img style=" position: absolute;width:1080px; height:720px" src="assets/img_bw.jpg" />
+
+<img [style.clip-path]="'inset(0px ' + (newValue) + 'px 0px 0px)'" style="width:1080px; height:720px" src="assets/img_color.jpg" />
