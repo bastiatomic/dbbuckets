@@ -46,3 +46,10 @@ margin-top: -10px;
 .pot p, .pot h2{
     color: white;
 }
+
+.text-wrapper{
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: 1px solid gray;
+    border-radius: 2px;
+}

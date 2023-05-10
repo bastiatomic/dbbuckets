@@ -19,9 +19,9 @@ export class PotService {
       goalProgress: 60,
       
       rules: [
-        "🔓 Open",
-        "🎯 Goal: 300 / 500",
-        "↗️ AutoTransfer: 5% of Income",
+        "🔓 Offen",
+        "🎯 Ziel: 300 / 500",
+        "↗️ Transfer: 5% des Einkommens",
         "🕰️ 01.01.2025",
       ]
     },
@@ -29,29 +29,29 @@ export class PotService {
       name: "Urlaub auf Grand Canaria",
       goalProgress: 25,
       rules: [
-        "🔒 Locked",
-        "🎯 Goal: 5.000 / 20.000",
-        "↗️ AutoTransfer: 10% of Income",
+        "🔒 Geschlossen",
+        "🎯 Ziel: 5.000 / 20.000",
+        "↗️ Transfer: 10% des Einkommens",
         "🕰️ 01.01.2025",
       ]
     },
     {
-      name: "Mock Pot",
+      name: "Test Bucket",
       goalProgress: 80,
       rules: [
-        "Rule 1",
-        "Rule 2",
-        "Rule 3",
+        "Regel 1",
+        "Regel 2",
+        "Regel 3",
         "🕰️ 01.01.2025",
       ]
     },
     {
-      name: "Lebensmittel | 100 left of 200€",
+      name: "Lebensmittel | 100€ von 200€ übrig",
       goalProgress: 50,
       rules: [
-        "Rule 1",
-        "Rule 2",
-        "Rule 3",
+        "Regel 1",
+        "Regel 2",
+        "Regel 3",
       ]
     }
   ]

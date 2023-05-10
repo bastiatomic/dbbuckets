@@ -12,22 +12,36 @@
 <div class="grid-container">
   <div class="pot" *ngFor="let pot of pots">
 
-    <div class="background-bw" [style.background-image]="'url(assets/img_bw.jpg)'"></div>
-    <div class="background-color" [style.background-image]="'url(assets/img_color.jpg)'" [style.clip-path]="'inset(0px ' + (500- pot.goalProgress/100*500) + 'px 0px 0px)'"></div>
-  
-   <!-- <mat-progress-bar mode="determinate" value={{pot.goalProgress}}></mat-progress-bar>-->
-    <h2>{{pot.name}}</h2>
+   
 
-    <div>
-      <p *ngFor="let rule of pot.rules">{{rule}}</p>
+    <mat-progress-bar mode="determinate" value={{pot.goalProgress}}></mat-progress-bar>
+
+    <h2 style="color: black">{{pot.name}}</h2>
+
+
+    <div class="text-wrapper" style="display: inline-block;
+    width: 30%; ">
+      <div *ngFor="let rule of pot.rules">
+        <div>
+
+          <p>{{rule}}</p>
+        </div>
+
+      </div>
+
     </div>
 
-    <button style="float: right;" mat-raised-button color="warn" (click)="deleteMe(pot.name)">Löschen</button>
+
+    <button style="position: absolute; bottom: 10px; right: 10px" mat-raised-button color="warn"
+      (click)="deleteMe(pot.name)">Löschen</button>
 
   </div>
+
+
 </div>
 
-<button style="margin-left: 10px;margin-top: 10px" mat-raised-button color="primary" (click)="openDialog()">+ Neuer Bucket</button>
+<button style="margin-left: 10px;margin-top: 10px" mat-raised-button color="primary" (click)="openDialog()">+ Neuer
+  Bucket</button>
 
 
 <br>
