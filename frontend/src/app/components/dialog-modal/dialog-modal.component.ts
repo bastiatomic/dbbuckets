@@ -25,7 +25,7 @@ export class DialogModalComponent {
   mock_name: string = 'Bucket-Name #1';
 
   rules: Rule[] = [
-    {id: 0, name: "Limit", type: "number"},
+    {id: 0, name: "Ziel", type: "number"},
     {id: 1, name: "Enddatum", type: "date"},
     {id: 2, name: "AutoTransfer",  type: "text"},
     {id: 3, name: "Gesperrt?", type: "text"},
@@ -46,8 +46,8 @@ export class DialogModalComponent {
   savePot(){
     this.potService.pots.push({"name": this.mock_name, "goalProgress": 0,"sharing": null,
     "rules":[
-      "🔓 Open",
-      "🎯 Goal: 0 / 1000",
+      "🔓 Offen",
+      "🎯 Ziel: 0 / 1000",
       "↗️ AutoTransfer: Keiner",
       "🕰️ 10.05.2025",
     ]})

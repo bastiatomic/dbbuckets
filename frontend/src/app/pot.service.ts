@@ -22,7 +22,7 @@ export class PotService {
       rules: [
         "🎯 Fortschritt: 1.000 / 1.000",
         "↗️ Monatlich 5% des Einkommens",
-        "↗️ Überschuss geht an ROBIN-Account",
+        "↗️ Überschuss geht an 'iPhone 15'",
       ]
     },
     {

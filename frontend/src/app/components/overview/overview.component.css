@@ -6,7 +6,15 @@
     margin-right: 200px;
   }
 
-  .grid-container {
+.grid-container {
     display: grid;
-    grid-template-columns: 33vw 33vw 33vw;
+    grid-template-columns: 20vw 60vw 20vw;
+    text-align: center;
 }
+
+.centered-toolbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
