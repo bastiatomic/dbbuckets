@@ -1,20 +1,8 @@
-<mat-toolbar>
-  <span> Willkommen, Paula Müller </span>
-</mat-toolbar>
-
-<mat-card style="margin: 10px">
-  <mat-card-content>
-    <p>Aufgeteilter Betrag: 14.000€</p>
-    <p>Gesamtsaldo: 20.000€ (IBAN: DE98 9347 8340 1234)</p>
-  </mat-card-content>
-</mat-card>
 
 <div class="grid-container">
-  <div class="pot" *ngFor="let pot of pots">
+  <div (click)="openModal(pot)" style="cursor: pointer" class="pot" *ngFor="let pot of pots">
 
-   
-
-    <mat-progress-bar mode="determinate" value={{pot.goalProgress}}></mat-progress-bar>
+   <!--<mat-progress-bar mode="determinate" value={{pot.goalProgress}}></mat-progress-bar>-->
 
     <h2 style="color: black">{{pot.name}}</h2>
 
@@ -31,6 +19,16 @@
 
     </div>
 
+    <div class="progress-container" style="position:absolute;top:10px;right:10px">
+      <mat-progress-spinner
+        class="progress-spinner"
+        mode="determinate"
+        [value]="pot.goalProgress"
+        [diameter]="100"
+        [strokeWidth]="10">
+      </mat-progress-spinner>
+      <div class="progress-text">{{pot.goalProgress}}%</div>
+    </div>
 
     <button style="position: absolute; bottom: 10px; right: 10px" mat-raised-button color="warn"
       (click)="deleteMe(pot.name)">Löschen</button>

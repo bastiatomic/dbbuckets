@@ -1,0 +1,12 @@
+<div style="margin: 30px">
+
+    <h1>{{content.name}}</h1><button mat-raised-button color="warn" style="position: absolute; top:10px; right:10px;" (click)="close()">X</button>
+
+    <p *ngFor="let data of content.rules">{{data}}</p>
+
+    <br>
+
+    <button  mat-raised-button color="primary">Regeln bearbeiten</button>
+
+
+</div>

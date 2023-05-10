@@ -4,6 +4,7 @@ interface Pot {
   name: string,
   goalProgress: number,
   rules: string[],
+  sharing: string | null,
 }
 
 @Injectable({
@@ -15,44 +16,38 @@ export class PotService {
 
   pots: Pot[]  =[
     {
-      name: "PlayStation 5",
-      goalProgress: 60,
-      
+      name: "Rücklagen",
+      goalProgress: 100,
+      sharing: null,
+      rules: [
+        "🎯 Fortschritt: 1.000 / 1.000",
+        "↗️ Monatlich 5% des Einkommens",
+        "↗️ Überschuss geht an ROBIN-Account",
+      ]
+    },
+    {
+      name: "iPhone 15",
+      goalProgress: 40,
+      sharing: null,
       rules: [
         "🔓 Offen",
-        "🎯 Ziel: 300 / 500",
-        "↗️ Transfer: 5% des Einkommens",
+        "🎯 Ziel: 600 / 1.500",
+        "↗️ Monatlicher Sparbetrag: 150€",
         "🕰️ 01.01.2025",
       ]
     },
     {
-      name: "Urlaub auf Grand Canaria",
-      goalProgress: 25,
+      name: "Urlaub auf Gran Canaria",
+      goalProgress: 16,
+      sharing: null,
       rules: [
         "🔒 Geschlossen",
-        "🎯 Ziel: 5.000 / 20.000",
-        "↗️ Transfer: 10% des Einkommens",
+        "🎯 Ziel: 500 / 3.000",
+        "↗️ Monatlicher Sparbetrag: 250€",
         "🕰️ 01.01.2025",
       ]
     },
-    {
-      name: "Test Bucket",
-      goalProgress: 80,
-      rules: [
-        "Regel 1",
-        "Regel 2",
-        "Regel 3",
-        "🕰️ 01.01.2025",
-      ]
-    },
-    {
-      name: "Lebensmittel | 100€ von 200€ übrig",
-      goalProgress: 50,
-      rules: [
-        "Regel 1",
-        "Regel 2",
-        "Regel 3",
-      ]
-    }
+    
+    
   ]
 }

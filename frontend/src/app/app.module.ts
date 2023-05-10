@@ -22,14 +22,17 @@ import { MatInputModule } from '@angular/material/input';
 import {MatProgressBarModule} from '@angular/material/progress-bar'
 import {MatIconModule} from '@angular/material/icon';
 import { OverviewComponent } from './components/overview/overview.component';
-import { SliderComponent } from './components/slider/slider.component';
 import {MatSliderModule} from '@angular/material/slider';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { PotDetailsModalComponent } from './components/pot-details-modal/pot-details-modal.component';
+
+
+
 
 const routes: Routes = [
   
   { path: 'overview', component: OverviewComponent },
-  { path: 'buckets', component: FundingpotComponent },
-  { path: 'slider', component: SliderComponent }
+  { path: 'buckets', component: FundingpotComponent }
 ];
 
 
@@ -40,7 +43,8 @@ const routes: Routes = [
     AccountDetailsComponent,
     FundingpotComponent,
     DialogModalComponent,
-    SliderComponent
+    PotDetailsModalComponent,
+    OverviewComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +64,8 @@ const routes: Routes = [
     MatInputModule,
     MatProgressBarModule,
     MatIconModule,
-    MatSliderModule
+    MatSliderModule,
+    MatProgressSpinnerModule
   ],
   exports: [RouterModule, CommonModule],
   providers: [],

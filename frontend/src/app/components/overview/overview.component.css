@@ -1,0 +1,12 @@
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 33vw 33vw 33vw;
+}

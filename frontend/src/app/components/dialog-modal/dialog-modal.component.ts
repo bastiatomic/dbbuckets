@@ -4,7 +4,13 @@ import { PotService } from 'src/app/pot.service';
 
 interface Rule{
   id: number,
-  name: string
+  name: string,
+  type: string
+}
+
+interface setRules{
+  name: string;
+  value: string;
 }
 
 @Component({
@@ -16,27 +22,34 @@ export class DialogModalComponent {
 
   constructor(public dialog: MatDialog, public potService: PotService) {}
 
-  mock_name: string = '';
+  mock_name: string = 'Bucket-Name #1';
 
   rules: Rule[] = [
-    {id: 0, name: "Limit"},
-    {id: 1, name: "Enddatum"},
-    {id: 2, name: "AutoTransfer"},
-    {id: 3, name: "Locked?"},
+    {id: 0, name: "Limit", type: "number"},
+    {id: 1, name: "Enddatum", type: "date"},
+    {id: 2, name: "AutoTransfer",  type: "text"},
+    {id: 3, name: "Gesperrt?", type: "text"},
   ];
+
+  newrules: setRules[] = [
+    {name: "", value: ""}
+  ]
 
   close(){
     this.dialog.closeAll();
   }
 
+  addNewRule(){
+    this.newrules.push({name: "null", value: ""})
+  }
+
   savePot(){
-    console.log(this.mock_name)
-    this.potService.pots.push({"name": this.mock_name, "goalProgress": 0,
+    this.potService.pots.push({"name": this.mock_name, "goalProgress": 0,"sharing": null,
     "rules":[
       "🔓 Open",
-      "🎯 Goal: 0 / 500",
-      "↗️ AutoTransfer: 2% of Income",
-      "🕰️ 01.02.2025",
+      "🎯 Goal: 0 / 1000",
+      "↗️ AutoTransfer: Keiner",
+      "🕰️ 10.05.2025",
     ]})
 
   }
